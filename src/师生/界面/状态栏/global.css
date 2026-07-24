@@ -1,0 +1,128 @@
+:root {
+  --c-primary: #e91e63;
+  --c-accent: #ff6b81;
+  --c-surface: #faf9f7;
+  --c-surface-alt: #f3f0ec;
+  --c-border: #e8e4df;
+  --c-text: #3d3a36;
+  --c-text-muted: #8c8882;
+  --c-bg: #ffffff;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.sb-root {
+  font-family: 'Sarasa Gothic SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 12px;
+  color: var(--c-text);
+  line-height: 1.5;
+  user-select: none;
+}
+
+.sb-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 10px;
+  max-width: 560px;
+}
+
+/* ── Panel ── */
+.stat-panel {
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-panel.sb-main {
+  border-left: 3px solid var(--c-primary);
+}
+
+.stat-panel.sb-side {
+  border-left: 3px solid var(--c-text-muted);
+}
+
+.panel-header {
+  padding: 8px 12px 4px;
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+
+.panel-body {
+  padding: 6px 12px 8px;
+}
+
+/* ── Rows ── */
+.sb-char-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sb-char-name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.sb-char-state {
+  font-size: 11px;
+  color: var(--c-text-muted);
+}
+
+.sb-section-label {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--c-text-muted);
+}
+
+.sb-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2px 0;
+}
+
+.sb-label {
+  color: var(--c-text-muted);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.sb-value {
+  font-weight: 600;
+  font-size: 11px;
+  text-align: right;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sb-divider {
+  height: 1px;
+  background: var(--c-border);
+  margin: 4px 0;
+}
+
+/* ── Progress bar ── */
+.sb-progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sb-progress-track {
+  flex: 1;
+  height: 6px;
+  background: var(--c-surface-alt);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.sb-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
