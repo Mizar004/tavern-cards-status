@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "系统": {
+      "type": "object",
+      "properties": {
+        "日期": {
+          "type": "string"
+        },
+        "时间段": {
+          "type": "string"
+        },
+        "当前场景": {
+          "type": "string"
+        },
+        "当前位置": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "日期",
+        "时间段",
+        "当前场景",
+        "当前位置"
+      ]
+    },
+    "诗织": {
+      "type": "object",
+      "properties": {
+        "好感度": {
+          "type": "number"
+        },
+        "状态": {
+          "type": "string"
+        },
+        "亲密度阶段": {
+          "type": "string",
+          "enum": [
+            "同居适应期",
+            "界限模糊期",
+            "暧昧期",
+            "恋人"
+          ]
+        },
+        "前日睡眠质量": {
+          "type": "string",
+          "enum": [
+            "良好",
+            "一般",
+            "差"
+          ]
+        }
+      },
+      "required": [
+        "好感度",
+        "状态",
+        "亲密度阶段",
+        "前日睡眠质量"
+      ]
+    },
+    "关系": {
+      "type": "object",
+      "properties": {
+        "同居秘密暴露度": {
+          "type": "number"
+        },
+        "学校互动次数": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "同居秘密暴露度",
+        "学校互动次数"
+      ]
+    }
+  },
+  "required": [
+    "系统",
+    "诗织",
+    "关系"
+  ]
+}
